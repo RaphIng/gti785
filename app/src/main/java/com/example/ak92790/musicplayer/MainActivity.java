@@ -1,11 +1,13 @@
 package com.example.ak92790.musicplayer;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import java.io.File;
 import java.io.FileDescriptor;
@@ -40,6 +42,13 @@ public class MainActivity extends AppCompatActivity {
             System.out.println("echec");
         }
 
+    }
+
+
+    public void QrActivity(View view)
+    {
+        Intent intent = new Intent(this, QrCode.class);
+        startActivity(intent);
     }
 
 }
